@@ -44,18 +44,18 @@
                     <!-- /notifiche -->
 
                     <!-- tasto cerca -->
-                    <div class="find flex">
-                        <div class="lente"><i class="fa fa-search"></i></div>
-                        <div><input type="text" placeholder="Cerca o inizia una nuova chat"></div>
-                    </div>
+                    <section class="find flex">
+                        <button type="button"><i class="fa fa-search"></i></button>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" name="search">
+                    </section>
                     <!-- /tasto cerca -->
 
                     <!-- lista utenti -->
                     <div class="chat-users">
-                        <div class="utente flex align">
-                            <img src="img/avatar_1.jpg" alt="logo utente">
+                        <div class="utente flex align" v-for="(contact, index) in contacts">
+                            <img :src= "contact['avatar']" alt="logo utente">
                             <div class="grow">
-                                <h4>Patrizio</h4>
+                                <h4>{{contact.name}}</h4>
                                 <h6>Ultimo messaggio inviato</h6>
                             </div>
                             <h6>12:00</h6>
@@ -73,7 +73,7 @@
                     <div class="flex align">
                         <img src="img/avatar_1.jpg" alt="logo utente">
                         <div>
-                            <h4>Patrizio</h4>
+                            <h4>Maurizio</h4>
                             <h6>Ultimo accesso oggi alle 12:00</h6>
                         </div>
                     </div>
@@ -111,9 +111,9 @@
                 </main>
                 <footer class="right-footer">
                     <!-- footer messaggi -->
-                    <div><i class="fa-regular fa-face-smile"></i></div>
-                    <div><input type="text" placeholder="Scrivi un messaggio"></div>
-                    <div><i class="fa-solid fa-microphone"></i></div>
+                    <div class="smile"><i class="fa-regular fa-face-smile"></i></div>
+                    <div class="messaggio"><input type="text" placeholder="Scrivi un messaggio"></div>
+                    <div class="microfono"><i class="fa-solid fa-microphone"></i></div>
                     <!-- /footer messaggi -->
                 </footer>
             </div>
@@ -124,13 +124,12 @@
 
 
 
-
-    <!-- java script -->
-    <script src="js/main.js"></script>
-    <!-- /java script -->
     <!-- CDN vue.js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- /CDN vue.js -->
+    <!-- java script -->
+    <script src="js/main.js"></script>
+    <!-- /java script -->
 </body>
 
 </html>

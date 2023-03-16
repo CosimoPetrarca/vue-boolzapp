@@ -113,6 +113,10 @@ img {
     width: 20%;
 }
 
+.grow h6, .utente h6{
+    color: lightgray;
+}
+
 /*---------
   Main right
  ---------*/
@@ -158,4 +162,9 @@ img {
     background-color: white;
     padding: 10px;
     border-radius: 10px;
+}
+
+.smile, .microfono{
+    width: 20%;
+    text-align: center;
 }
