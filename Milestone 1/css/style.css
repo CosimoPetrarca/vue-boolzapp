@@ -6,50 +6,92 @@
     margin: 0;
     box-sizing: border-box;
 }
+/*---------
+    Common 
+ ---------*/
 
-.container {
+.flex{
     display: flex;
-    width: 900px;
-    height: 700px;
-    margin: 0 auto;
-    
 }
 
-.left{
-    width: 40%;
-    height: 100%;
-    border-right: 1px solid black;
-}
-
-.right{
-    width: 60%;
-    height: 100%;
-}
-
-.left header, .right header, .right-footer{
-    height: 50px;
-    background-color: aliceblue;
-    display: flex;
-    justify-content: space-between;
+.align{
     align-items: center;
 }
 
-.notification-space{
+body {
+    background: linear-gradient(to bottom, #009688 15%, #d9dbd4 15%);
+
+}
+
+.container {
+    width: 900px;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.fa-solid{
+    color: #b1b1b1;
+    padding: 0 10px;
+}
+
+.bell{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+    color: #8edafc;
+    text-align: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+/*---------
+   Main
+ ---------*/
+
+.left {
+    width: 40%;
+}
+
+.right {
+    width: 60%;
+    border-left: 1px solid gray;
+}
+
+.left header,
+.right header,
+.right-footer {
+    background-color:#eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.notification-space {
     background-color: #8edafc;
     height: 60px;
 }
 
-.find{
+.find {
     background-color: white;
-    height: 20px;
+    height: 30px;
 }
 
-.chat-users{
+.chat-users {
     background-color: lightgray;
-    height: 570px;
+    height: calc(100vh - 140px);
 }
 
-.window-chat{
+.window-chat {
     background-color: lightcoral;
-    height: 600px;
+    height: calc(100vh - 100px);
 }

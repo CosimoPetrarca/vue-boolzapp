@@ -15,42 +15,53 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="left">
-            <header>
-                <div>
-                    logo utente e nome
-                </div>
-                <div>
-                    3 font awesome
-                </div>
-            </header>
-            <main>
-                <div class="notification-space">Ricezione messaggi</div>
-                <div class="find">Tasto cerca</div>
-                <div class="chat-users">utenti Chat</div>
-            </main>
-        </div>
-        <div class="right">
-            <header>
-                <div>
-                    logo utente nome e ultimo accesso
-                </div>
-                <div>
-                    3 font awesome
-                </div>
-            </header>
-            <main class="window-chat">
-                chat messaggi
-            </main>
-            <footer class="right-footer">
-                <div>faccina</div>
-                <div>scrittura messaggi</div>
-                <div>microfono</div>
-            </footer>
+    <div id="app">
+        <div class="container flex">
+            <div class="left">
+                <header>
+                    <div class="flex align">
+                        <img src="img/avatar_8.jpg" alt="logo utente">
+                        <span>Cosimo</span>
+                    </div>
+                    <div class="flex align">
+                       <div><i class="fa-solid fa-circle-notch"></i></div>
+                       <div><i class="fa-solid fa-message"></i></div>
+                       <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    </div>
+                </header>
+                <main>
+                    <div class="notification-space flex align">
+                        <div class="bell flex align"><i class="fa-regular fa-bell-slash"></i></div>
+                        <div>
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+                    <div class="find">Tasto cerca</div>
+                    <div class="chat-users">utenti Chat</div>
+                </main>
+            </div>
+            <div class="right">
+                <header>
+                    <div>
+                        logo utente nome e ultimo accesso
+                    </div>
+                    <div>
+                        3 font awesome
+                    </div>
+                </header>
+                <main class="window-chat">
+                    chat messaggi
+                </main>
+                <footer class="right-footer">
+                    <div>faccina</div>
+                    <div>scrittura messaggi</div>
+                    <div>microfono</div>
+                </footer>
+            </div>
         </div>
     </div>
-   
+
 
 
 
