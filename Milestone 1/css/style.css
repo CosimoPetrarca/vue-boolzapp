@@ -6,47 +6,52 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 /*---------
     Common 
  ---------*/
 
-.flex{
+.flex {
     display: flex;
 }
 
-.align{
+.align {
     align-items: center;
 }
 
-.grow{
+center {
+    justify-content: center;
+}
+
+.grow {
     flex-grow: 1;
 }
 
 body {
     background: linear-gradient(to bottom, #009688 15%, #d9dbd4 15%);
-
 }
 
 .container {
-    width: 1000px;
-    height: 100%;
-    margin: 0 auto;
-
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
-img{
+img {
     height: 50px;
     width: 50px;
     border-radius: 50%;
     padding: 5px;
 }
 
-.fa-solid, .fa-face-smile{
+.fa-solid,
+.fa-face-smile {
     color: #b1b1b1;
     padding: 0 10px;
 }
 
-.bell{
+.bell {
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -62,7 +67,7 @@ img{
  ---------*/
 
 .left {
-    width: 40%;
+    width: 30%;
 }
 
 .right {
@@ -73,7 +78,7 @@ img{
 .left header,
 .right header,
 .right-footer {
-    background-color:#eaeaea;
+    background-color: #eaeaea;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,21 +97,16 @@ img{
 
 .chat-users {
     background-color: white;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 147px);
 }
 
-.utente{
+.utente {
     padding: 0 10px;
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
 }
 
-.window-chat {
-    background-image: url(../img/mine.jpg);
-    height: calc(100vh - 100px);
-}
-
-.lente{
+.lente {
     background-color: white;
     border: 1px solid lightgray;
     text-align: center;
@@ -116,3 +116,46 @@ img{
 /*---------
   Main right
  ---------*/
+
+.window-chat {
+    background-image: url(../img/mine.jpg);
+    height: calc(100vh - 100px);
+    padding-top: 50px;
+}
+
+.window-chat ul {
+    list-style: none;
+}
+
+.window-chat li {
+    margin-bottom: 10px;
+}
+
+.time {
+    font-size: 12px;
+    color: #a0a0a0;
+    padding-left: 5px;
+}
+
+.inviato {
+    display: flex;
+    padding-left: 70px;
+}
+
+.ricevuto {
+    display: flex;
+    justify-content: right;
+    padding-right: 70px;
+}
+
+.ricevuto div {
+    background-color: #d6f8bc;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.inviato div {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
