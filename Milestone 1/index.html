@@ -17,19 +17,23 @@
 <body>
     <div id="app">
         <div class="container flex">
+            <!-- left main -->
             <div class="left">
                 <header>
+                    <!-- header utente -->
                     <div class="flex align">
                         <img src="img/avatar_8.jpg" alt="logo utente">
-                        <span>Cosimo</span>
+                        <h4>Cosimo</h4>
                     </div>
                     <div class="flex align">
-                       <div><i class="fa-solid fa-circle-notch"></i></div>
-                       <div><i class="fa-solid fa-message"></i></div>
-                       <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                        <div><i class="fa-solid fa-circle-notch"></i></div>
+                        <div><i class="fa-solid fa-message"></i></div>
+                        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
                     </div>
+                    <!-- /header utente -->
                 </header>
                 <main>
+                    <!-- notifiche -->
                     <div class="notification-space flex align">
                         <div class="bell flex align"><i class="fa-regular fa-bell-slash"></i></div>
                         <div>
@@ -37,28 +41,66 @@
                             <a href="">Attiva notifiche desktop</a>
                         </div>
                     </div>
-                    <div class="find">Tasto cerca</div>
-                    <div class="chat-users">utenti Chat</div>
+                    <!-- /notifiche -->
+
+                    <!-- tasto cerca -->
+                    <div class="find flex">
+                        <div class="lente"><i class="fa fa-search"></i></div>
+                        <div><input type="text" placeholder="Cerca o inizia una nuova chat"></div>
+                    </div>
+                    <!-- /tasto cerca -->
+
+                    <!-- lista utenti -->
+                    <div class="chat-users">
+                        <div class="utente flex align">
+                            <img src="img/avatar_1.jpg" alt="logo utente">
+                            <div class="grow">
+                                <h4>Patrizio</h4>
+                                <h6>Ultimo messaggio inviato</h6>
+                            </div>
+                            <h6>12:00</h6>
+                        </div>
+                        
+
+                    </div>
+                    <!-- /lista utenti -->
                 </main>
             </div>
+            <!-- /left main -->
+
+            <!-- right main -->
             <div class="right">
                 <header>
-                    <div>
-                        logo utente nome e ultimo accesso
+                    <!-- header messaggi -->
+                    <div class="flex align">
+                        <img src="img/avatar_1.jpg" alt="logo utente">
+                        <div>
+                            <h4>Patrizio</h4>
+                            <h6>Ultimo accesso oggi alle 12:00</h6>
+                        </div>
                     </div>
-                    <div>
-                        3 font awesome
+                    <div class="flex align">
+                        <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <div><i class="fa-solid fa-paperclip"></i></div>
+                        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
                     </div>
+                    <!-- /header messaggi -->
                 </header>
+
                 <main class="window-chat">
+                    <!-- chat messaggi -->
                     chat messaggi
+                    <!-- /chat messaggi -->
                 </main>
                 <footer class="right-footer">
-                    <div>faccina</div>
-                    <div>scrittura messaggi</div>
-                    <div>microfono</div>
+                    <!-- footer messaggi -->
+                    <div><i class="fa-regular fa-face-smile"></i></div>
+                    <div><input type="text" placeholder="Scrivi un messaggio"></div>
+                    <div><i class="fa-solid fa-microphone"></i></div>
+                    <!-- /footer messaggi -->
                 </footer>
             </div>
+            <!-- /right main -->
         </div>
     </div>
 

@@ -18,13 +18,17 @@
     align-items: center;
 }
 
+.grow{
+    flex-grow: 1;
+}
+
 body {
     background: linear-gradient(to bottom, #009688 15%, #d9dbd4 15%);
 
 }
 
 .container {
-    width: 900px;
+    width: 1000px;
     height: 100%;
     margin: 0 auto;
 
@@ -37,7 +41,7 @@ img{
     padding: 5px;
 }
 
-.fa-solid{
+.fa-solid, .fa-face-smile{
     color: #b1b1b1;
     padding: 0 10px;
 }
@@ -54,7 +58,7 @@ img{
 }
 
 /*---------
-   Main
+   Main left
  ---------*/
 
 .left {
@@ -78,20 +82,37 @@ img{
 
 .notification-space {
     background-color: #8edafc;
-    height: 60px;
+    padding: 10px 0;
 }
 
 .find {
     background-color: white;
-    height: 30px;
+    padding: 10px 0;
 }
 
 .chat-users {
-    background-color: lightgray;
-    height: calc(100vh - 140px);
+    background-color: white;
+    height: calc(100vh - 150px);
+}
+
+.utente{
+    padding: 0 10px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
 }
 
 .window-chat {
-    background-color: lightcoral;
+    background-image: url(../img/mine.jpg);
     height: calc(100vh - 100px);
 }
+
+.lente{
+    background-color: white;
+    border: 1px solid lightgray;
+    text-align: center;
+    width: 20%;
+}
+
+/*---------
+  Main right
+ ---------*/
