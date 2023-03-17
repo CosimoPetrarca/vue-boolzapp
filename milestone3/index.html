@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- /font awesome -->
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <!-- left main -->
+            <div class="left">
+                <header>
+                    <!-- header utente -->
+                    <div class="flex align">
+                        <img src="img/avatar_8.jpg" alt="logo utente">
+                        <h4>Cosimo</h4>
+                    </div>
+                    <div class="flex align">
+                        <div><i class="fa-solid fa-circle-notch"></i></div>
+                        <div><i class="fa-solid fa-message"></i></div>
+                        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    </div>
+                    <!-- /header utente -->
+                </header>
+                <main>
+                    <!-- notifiche -->
+                    <div class="notification-space flex align">
+                        <div class="bell flex align"><i class="fa-solid fa-bell-slash"></i></div>
+                        <div>
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+                    <!-- /notifiche -->
+
+                    <!-- tasto cerca -->
+                    <section class="find">
+                        <div class="flex container-find">
+                            <div class="lente"><i class="fa fa-search"></i></div>
+                            <input class="input-right" type="text" placeholder="Cerca o inizia una nuova chat" name="search">
+                        </div>
+                    </section>
+                    <!-- /tasto cerca -->
+
+                    <!-- lista utenti -->
+                    <div class="chat-users">
+                        <div class="utente flex align" v-for="(contact, index) in contacts" @click="contatti(index)">
+                            <img :src="contact['avatar']" alt="logo utente">
+                            <div class="grow">
+                                <h4>{{contact.name}}</h4>
+                                <h6>Ultimo messaggio inviato</h6>
+                            </div>
+                            <h6>12:00</h6>
+                        </div>
+                    </div>
+                    <!-- /lista utenti -->
+                </main>
+            </div>
+            <!-- /left main -->
+
+            <!-- right main -->
+            <div class="right">
+                <header>
+                    <!-- header messaggi -->
+                    <div class="flex align">
+                        <img :src="contacts[userIndex].avatar" alt="logoUtente">
+                        <div>
+                            <h4>{{ contacts[userIndex].name }}</h4>
+                            <h6>Ultimo accesso oggi alle 12:00</h6>
+                        </div>
+                    </div>
+                    <div class="flex align">
+                        <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <div><i class="fa-solid fa-paperclip"></i></div>
+                        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    </div>
+                    <!-- /header messaggi -->
+                </header>
+
+                <main class="window-chat">
+                    <!-- chat messaggi -->
+                    <ul v-for="(message, index) in contacts[userIndex].messages" :class="isReceived(index)">
+                        <li>
+                            <div class="flex">
+                                <p>{{ message.message }}</p>
+                                <span class="time">12:00</span>
+                            </div>
+                        </li>
+                 
+                    <!-- /chat messaggi -->
+                </main>
+                <footer class="right-footer ">
+                    <!-- footer messaggi -->
+                        <div class="smile"><i class="fa-regular fa-face-smile"></i></div>
+                        <div class="messaggio"><input class="messaggio" type="text" placeholder="Scrivi un messaggio" name="search"></div>
+                        <div class="microfono"><i class="fa-solid fa-microphone"></i></div>
+                    <!-- /footer messaggi -->
+                </footer>
+            </div>
+            <!-- /right main -->
+        </div>
+    </div>
+
+
+
+
+    <!-- CDN vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- /CDN vue.js -->
+    <!-- java script -->
+    <script src="js/main.js"></script>
+    <!-- /java script -->
+</body>
+
+</html>
