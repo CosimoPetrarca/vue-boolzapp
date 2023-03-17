@@ -5,6 +5,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            userIndex: 0,
             contacts: [
                 {
                     name: 'Maurizio',
@@ -290,9 +291,16 @@ createApp({
                     ],
                 }
             ]
-            
-            
+        }
+    },
+
+    methods: {
+        isReceived(index) {
+            if (this.contacts[0].messages[index].status === 'received') {
+                return 'inviato'
+            }
+            return 'ricevuto'
         }
     }
-
+    
 }).mount('#app')

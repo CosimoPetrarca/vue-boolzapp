@@ -89,26 +89,14 @@
 
                 <main class="window-chat">
                     <!-- chat messaggi -->
-                    <ul>
+                    <ul v-for="(message, index) in contacts[userIndex].messages" :class="isReceived(index)">
                         <li class="ricevuto">
                             <div class="flex">
-                                <p>Hai portato a spasso il cane?</p>
+                                <p>{{ message.message }}</p>
                                 <span class="time">12:00</span>
                             </div>
                         </li>
-                        <li class="ricevuto">
-                            <div class="flex">
-                                <p>Ricordati di stendere i panni!</p>
-                                <span class="time">12:05</span>
-                            </div>
-                        </li>
-                        <li class="inviato">
-                            <div class="flex">
-                                <p>Tutto fatto!</p>
-                                <span class="time">12:10</span>
-                            </div>
-                        </li>
-                    </ul>
+                 
                     <!-- /chat messaggi -->
                 </main>
                 <footer class="right-footer ">
