@@ -54,7 +54,7 @@
 
                     <!-- lista utenti -->
                     <div class="chat-users">
-                        <div class="utente flex align" v-for="(contact, index) in contacts">
+                        <div class="utente flex align" v-for="(contact, index) in contacts" @click="contatti(index)">
                             <img :src="contact['avatar']" alt="logo utente">
                             <div class="grow">
                                 <h4>{{contact.name}}</h4>
@@ -73,9 +73,9 @@
                 <header>
                     <!-- header messaggi -->
                     <div class="flex align">
-                        <img src="img/avatar_1.jpg" alt="logo utente">
+                        <img :src="contacts[userIndex].avatar" alt="logoUtente">
                         <div>
-                            <h4>Maurizio</h4>
+                            <h4>{{ contacts[userIndex].name }}</h4>
                             <h6>Ultimo accesso oggi alle 12:00</h6>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                 <main class="window-chat">
                     <!-- chat messaggi -->
                     <ul v-for="(message, index) in contacts[userIndex].messages" :class="isReceived(index)">
-                        <li class="ricevuto">
+                        <li>
                             <div class="flex">
                                 <p>{{ message.message }}</p>
                                 <span class="time">12:00</span>
@@ -101,17 +101,9 @@
                 </main>
                 <footer class="right-footer ">
                     <!-- footer messaggi -->
-
-                    
                         <div class="smile"><i class="fa-regular fa-face-smile"></i></div>
                         <div class="messaggio"><input class="messaggio" type="text" placeholder="Scrivi un messaggio" name="search"></div>
                         <div class="microfono"><i class="fa-solid fa-microphone"></i></div>
-                   
-                    
-                        <!-- <div class="smile"><i class="fa-regular fa-face-smile"></i></div>
-                        <div><input class="messaggio" type="text" placeholder="Scrivi un messaggio"></div>
-                        <div class="microfono"><i class="fa-solid fa-microphone"></i></div> -->
-                   
                     <!-- /footer messaggi -->
                 </footer>
             </div>

@@ -296,10 +296,14 @@ createApp({
 
     methods: {
         isReceived(index) {
-            if (this.contacts[0].messages[index].status === 'received') {
-                return 'inviato'
+            if (this.contacts[this.userIndex].messages[index].status === 'received') {
+                return 'ricevuto div'
             }
-            return 'ricevuto'
+            return 'inviato div'
+        },
+
+        contatti(index) {
+            this.userIndex = index
         }
     }
     
