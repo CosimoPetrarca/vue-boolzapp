@@ -19,8 +19,12 @@
     align-items: center;
 }
 
-center {
+.center {
     justify-content: center;
+}
+
+.between{
+    justify-content: space-between;
 }
 
 .grow {
@@ -98,11 +102,22 @@ h6{
     color: #8edafc;
 }
 
-
-
 .find {
-    background-color: grey;
-    padding: 10px 0;
+    background-color: #fafafa;
+}
+
+.container-find{
+    padding: 10px 10px;
+
+}
+
+.lente{
+    width: 10%;
+    padding: 5px;
+    color: lightgray;
+}
+.input-right{
+    width: 90%;
 }
 
 .chat-users {
@@ -176,6 +191,11 @@ h6{
 }
 
 .smile, .microfono{
-    width: 10%;
     text-align: center;
+    width: 10%;
+}
+
+.messaggio{
+width: 100%;
+padding: 5px;
 }
