@@ -5,6 +5,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            newMessage: "",
             userIndex: 0,
             contacts: [
                 {
@@ -304,6 +305,17 @@ createApp({
 
         contatti(index) {
             this.userIndex = index
+        },
+
+        addMessage(index) {
+            if(this.newMessage.trim() !== '') {
+                const messaggioInviato = {
+                    message: this.newMessage,
+                    status: 'sent'
+                }
+                this.contacts[index].messages.push(messaggioInviato);
+            }
+            this.newMessage = '';
         }
     }
     
