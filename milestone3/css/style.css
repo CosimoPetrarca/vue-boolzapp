@@ -23,12 +23,13 @@
     justify-content: center;
 }
 
-.between{
+.between {
     justify-content: space-between;
 }
 
 .grow {
     flex-grow: 1;
+    padding-left: 10px;
 }
 
 body {
@@ -47,7 +48,6 @@ img {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    padding: 5px;
 }
 
 .fa-solid,
@@ -66,7 +66,8 @@ img {
     justify-content: center;
     margin: 0 10px;
 }
-h6{
+
+h6 {
     color: gray;
 }
 
@@ -78,9 +79,8 @@ h6{
     width: 30%;
 }
 
-.right {
-    width: 60%;
-    border-left: 1px solid gray;
+.logo-mio h4 {
+    padding-left: 10px;
 }
 
 .left header,
@@ -90,7 +90,8 @@ h6{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: 60px;
+    padding: 0 10px;
 }
 
 .notification-space {
@@ -98,7 +99,7 @@ h6{
     padding: 10px 0;
 }
 
-.notification-space i{
+.notification-space i {
     color: #8edafc;
 }
 
@@ -106,17 +107,18 @@ h6{
     background-color: #fafafa;
 }
 
-.container-find{
+.container-find {
     padding: 10px 10px;
 
 }
 
-.lente{
+.lente {
     width: 10%;
     padding: 5px;
     color: lightgray;
 }
-.input-right{
+
+.input-right {
     width: 90%;
     border: none;
 }
@@ -128,7 +130,7 @@ h6{
 }
 
 .utente {
-    padding: 0 10px;
+    padding: 10px;
     border-top: 1px solid lightgray;
     outline: 1px solid lightgray;
 }
@@ -140,7 +142,8 @@ h6{
     border-right: 1px solid lightgrey;
 }
 
-.grow h6, .utente h6{
+.grow h6,
+.utente h6 {
     color: lightgray;
 }
 
@@ -148,10 +151,20 @@ h6{
   Main right
  ---------*/
 
+.right {
+    width: 60%;
+    border-left: 1px solid gray;
+}
+
+.info-friends{
+    padding-left: 10px;
+}
+
 .window-chat {
     background-image: url(../img/mine.jpg);
-    height: calc(100% - 100px);
+    height: calc(100% - 120px);
     padding-top: 50px;
+    overflow-y: scroll;
 }
 
 .window-chat ul {
@@ -162,10 +175,17 @@ h6{
     margin-bottom: 10px;
 }
 
+.nuvola-messaggio p{
+    padding-right: 80px;
+}
+
 .time {
-    font-size: 12px;
+    font-size: 10px;
     color: #a0a0a0;
-    padding-left: 5px;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+
 }
 
 .inviato {
@@ -183,21 +203,24 @@ h6{
     background-color: #d6f8bc;
     padding: 10px;
     border-radius: 10px;
+    position: relative;
 }
 
 .inviato div {
     background-color: white;
     padding: 10px;
     border-radius: 10px;
+    position: relative;
 }
 
-.smile, .microfono{
+.smile,
+.microfono {
     text-align: center;
     width: 10%;
 }
 
-.messaggio{
-width: 100%;
-padding: 5px;
-border: none;
+.messaggio {
+    width: 100%;
+    padding: 5px;
+    border: none;
 }
