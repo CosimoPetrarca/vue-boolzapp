@@ -35,6 +35,7 @@
 body {
     background: linear-gradient(to bottom, #009688 15%, #d9dbd4 15%);
     height: 100vh;
+    font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -67,9 +68,10 @@ img {
     margin: 0 10px;
 }
 
-h6 {
-    color: gray;
+h6, a {
+    color: #b1b1b1;
 }
+
 
 /*---------
    Main left
@@ -80,7 +82,7 @@ h6 {
 }
 
 .logo-mio h4 {
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 .left header,
@@ -105,22 +107,17 @@ h6 {
 
 .find {
     background-color: #fafafa;
+    padding: 10px 10px;
 }
 
 .container-find {
-    padding: 10px 10px;
-
-}
-
-.lente {
-    width: 10%;
-    padding: 5px;
-    color: lightgray;
+    border: 1px solid #eaeaea;
 }
 
 .input-right {
     width: 90%;
     border: none;
+    padding-left: 5px;
 }
 
 .chat-users {
@@ -139,7 +136,9 @@ h6 {
     background-color: white;
     text-align: center;
     width: 20%;
-    border-right: 1px solid lightgrey;
+    border-right: 1px solid #eaeaea;
+    padding: 5px;
+    color: #b1b1b1;
 }
 
 .grow h6,
@@ -153,7 +152,7 @@ h6 {
 
 .right {
     width: 60%;
-    border-left: 1px solid gray;
+    border-left: 1px solid lightgrey;
 }
 
 .info-friends{
@@ -219,8 +218,13 @@ h6 {
     width: 10%;
 }
 
+.fa-face-smile, .fa-microphone{
+    color: grey;
+}
+
 .messaggio {
     width: 100%;
-    padding: 5px;
+    padding: 15px;
     border: none;
+    border-radius: 5px;
 }

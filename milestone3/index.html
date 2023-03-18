@@ -12,6 +12,11 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- /font awesome -->
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <!-- /google font -->
 </head>
 
 <body>
@@ -47,7 +52,8 @@
                     <section class="find">
                         <div class="flex container-find">
                             <div class="lente"><i class="fa fa-search"></i></div>
-                            <input class="input-right" type="text" placeholder="Cerca o inizia una nuova chat" name="search">
+                            <input class="input-right" type="text" placeholder="Cerca o inizia una nuova chat"
+                                name="search">
                         </div>
                     </section>
                     <!-- /tasto cerca -->
@@ -96,14 +102,15 @@
                                 <span class="time">12:00</span>
                             </div>
                         </li>
-                 
-                    <!-- /chat messaggi -->
+
+                        <!-- /chat messaggi -->
                 </main>
                 <footer class="right-footer ">
                     <!-- footer messaggi -->
-                        <div class="smile"><i class="fa-regular fa-face-smile"></i></div>
-                        <div class="messaggio"><input class="messaggio" type="text" placeholder="Scrivi un messaggio" name="search" v-model="newMessage" @keyup.enter="addMessage(userIndex)"></div>
-                        <div class="microfono"><i class="fa-solid fa-microphone"></i></div>
+                    <div class="smile"><i class="fa-regular fa-face-smile"></i></div>
+                    <div class="messaggio"><input class="messaggio" type="text" placeholder="Scrivi un messaggio"
+                            name="search" v-model="newMessage" @keyup.enter="addMessage(userIndex)"></div>
+                    <div class="microfono"><i class="fa-solid fa-microphone"></i></div>
                     <!-- /footer messaggi -->
                 </footer>
             </div>

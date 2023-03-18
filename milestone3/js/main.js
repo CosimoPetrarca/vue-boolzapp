@@ -3,6 +3,7 @@
 const { createApp } = Vue
 
 createApp({
+    // dati iniziali
     data() {
         return {
             newMessage: "",
@@ -173,7 +174,10 @@ createApp({
         }
     },
 
+    //metodi
     methods: {
+
+        //determino se un messaggio è stato ricevuto o inviato
         isReceived(index) {
             if (this.contacts[this.userIndex].messages[index].status === 'received') {
                 return 'ricevuto div'
@@ -181,20 +185,31 @@ createApp({
             return 'inviato div'
         },
 
+        //seleziono il contatto dall'elenco
         contatti(index) {
             this.userIndex = index
         },
 
+        // Invio un messaggio
         addMessage(index) {
-            if(this.newMessage.trim() !== '') {
+            if (this.newMessage.trim() !== '') {
                 const messaggioInviato = {
                     message: this.newMessage,
                     status: 'sent'
-                }
+                };
                 this.contacts[index].messages.push(messaggioInviato);
+
+                // Invio una risposta dopo 1 secondo
+                setTimeout(() => {
+                    const messaggioRicevuto = {
+                        message: 'Ok!',
+                        status: 'received'
+                    };
+                    this.contacts[index].messages.push(messaggioRicevuto);
+                }, 1000);
             }
-            this.newMessage = '';
+            this.newMessage = ''; //svuotare il campo di testo
         }
     }
-    
+
 }).mount('#app')
