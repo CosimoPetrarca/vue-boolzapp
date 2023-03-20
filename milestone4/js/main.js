@@ -6,6 +6,7 @@ createApp({
     // dati iniziali
     data() {
         return {
+            searchKey: "",
             newMessage: "",
             userIndex: 0,
             contacts: [
@@ -208,8 +209,15 @@ createApp({
                     this.contacts[index].messages.push(messaggioRicevuto);
                 }, 1000);
             }
-            this.newMessage = ''; //svuotare il campo di testo
+            this.newMessage = ""; //svuotare il campo di testo
+        },
+
+        filter(){            
+            if(this.searchKey.trim() !== ''){
+                return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchKey.toLowerCase()))
+            } else {
+                return this.contacts
+            }
         }
     }
-
 }).mount('#app');

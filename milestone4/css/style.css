@@ -142,7 +142,10 @@ a{
 .utente {
     padding: 10px;
     border-top: 1px solid lightgray;
-    outline: 1px solid lightgray;
+}
+.utente:last-child {
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
 }
 
 .lente {
