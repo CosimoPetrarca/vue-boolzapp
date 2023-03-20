@@ -20,8 +20,8 @@
 </head>
 
 <body>
-    <div id="app">
-        <div class="container">
+    
+        <div class="container" id="app">
             <!-- LEFT MAIN -->
             <div class="left">
                 <header>
@@ -53,7 +53,7 @@
                         <div class="flex container-find">
                             <div class="lente"><i class="fa fa-search"></i></div>
                             <input class="input-right" type="text" placeholder="Cerca o inizia una nuova chat"
-                                name="search">
+                                name="search" v-model="searchKey" @keyup="filteredList">
                         </div>
                     </section>
                     <!-- /tasto cerca -->
@@ -116,7 +116,7 @@
             </div>
             <!-- /RIGHT MAIN -->
         </div>
-    </div>
+    
 
 
 
